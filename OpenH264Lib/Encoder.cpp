@@ -34,7 +34,6 @@ namespace OpenH264Lib {
 		return rc;
 	}
 
-	// C#からbyte[]として呼び出し可能
 	int Encoder::Encode(array<Byte> ^i420)
 	{
 		// http://xptn.dtiblog.com/blog-entry-21.html
@@ -44,7 +43,6 @@ namespace OpenH264Lib {
 		return rc;
 	}
 
-	// C#からはunsafe&fixedを利用しないと呼び出しできない
 	int Encoder::Encode(unsigned char *i420)
 	{
 		memcpy(i420_buffer, i420, buffer_size);
